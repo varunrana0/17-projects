@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+}
+
+.search {
+  position: relative;
+  transition: all 0.4s linear 0.3s;
+}
+
+.search .input {
+  height: 40px;
+  width: 40px;
+  padding: 1rem;
+  background: #fff;
+  border: 0;
+  font-size: 1rem;
+  overflow: hidden;
+  transition: all 0.4s ease-in;
+  border-radius: 10px;
+}
+
+.search .input:focus,
+.search .btn:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 300px;
+}
+.search.active .btn {
+  transform: translateX(270px);
+}
+.input::placeholder {
+  color: #ccc;
+}
+
+.search .btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border: 0;
+  font-size: 1.2rem;
+  background: #fff;
+  border-radius: 10px;
+  transition: all 0.4s ease-in;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*********************
+
+content container
+
+**********************/
+
+.content-container {
+  padding: 50px 200px;
+  height: auto;
+  background: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #cee7e0;
+  padding: 2rem;
+  border-radius: 9px;
+
+  /* to make the children center of its parent element */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s linear;
+}
+
+.content-text {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.button {
+  position: absolute;
+  bottom: -15px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border-radius: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: all 0.4s linear;
+  /* background: #b6dbd1; */
+  border: 0;
+  box-shadow: inset 20px 20px 40px #9ecfc1;
+}
+
+*:focus {
+  outline: none;
+}
+.content.active {
+  width: 800px;
+  height: 300px;
+}
+
+.content.active .content-text {
+  opacity: 1;
+  transition: all 0.4s linear 0.3s;
+}

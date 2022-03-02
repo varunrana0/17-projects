@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Muli", sans-serif;
+  line-height: 1.5;
+  background: #333;
+  overflow-x: hidden;
+}
+
+.container {
+  background-color: #fafafa;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 100px;
+  transform-origin: top left;
+  position: relative;
+}
+
+.circle-container {
+  position: fixed;
+  top: -75px;
+  left: -75px;
+}
+
+.circle {
+  background-color: orangered;
+  cursor: pointer;
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  transition: all 0.4s ease-in;
+}
+
+.circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 0;
+  height: 100px;
+  font-size: 26px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container.active .circle {
+  transform: rotate(-80deg);
+}
+
+.container.active {
+  transform: rotate(-15deg);
+  /* z-index: -4; */
+  transform-origin: top left;
+}
+
+.circle button#open {
+  left: 60%;
+}
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.navbar {
+  position: fixed;
+  padding: 1rem 2rem 1rem 0.5rem;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.nav-links {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+li a {
+  text-decoration: none;
+  color: #f6f8f7;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  pointer-events: all;
+}

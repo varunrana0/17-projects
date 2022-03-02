@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.penal {
+  border-radius: 2.5rem;
+  flex: 0.5;
+  height: 80vh;
+  position: relative;
+  transition: all 0.8s linear;
+  cursor: pointer;
+}
+
+.penal p {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.2rem;
+  color: #fff;
+  margin: 0;
+  opacity: 0;
+  transition: all 0.6s ease-in 0.6s;
+}
+
+.penal.active {
+  flex: 5;
+}
+
+.penal.active p {
+  opacity: 1;
+}
+
+.box {
+  background: url(../img/christian-bruno-EDSGSKm5jvc-unsplash.jpg) no-repeat
+    center center/cover;
+}
+.box2 {
+  background: url(../img/gokberk-akdeniz-gD7Emwyym4g-unsplash.jpg) no-repeat
+    center center/cover;
+}
+.box3 {
+  background: url(../img/greg-becker--0_ww2ACIw8-unsplash.jpg) no-repeat center
+    center/cover;
+}
+.box4 {
+  background: url(../img/jacob-dyer-NWIOx1BKZrc-unsplash.jpg) no-repeat center
+    center/cover;
+}
+.box5 {
+  background: url(../img/jordan-wozniak-xP_AGmeEa6s-unsplash.jpg) no-repeat
+    center center/cover;
+}
+.box6 {
+  background: url(../img/ilnort-rueda-TlUwJ4pMc90-unsplash.jpg) no-repeat center
+    center/cover;
+}

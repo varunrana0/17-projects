@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/normalize.css" />
+    <title>PhoneBook List</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="head">
+        <h4 class="heading">
+          <i class="fas fa-user"></i>Phone-<span>Book</span>
+        </h4>
+      </header>
+
+      <!-- main content for the contact list here -->
+
+      <main class="main">
+        <section class="create-contact">
+          <div class="create-list-contact">
+            <div class="create">
+              <span class="create-heading">Create Contact</span>
+              <input type="button" value="Save" class="save" />
+            </div>
+            <div class="contact-field">
+              <div class="input-box">
+                <label for="name"><i class="fas fa-user"></i></label>
+                <input type="text" class="nameInput" placeholder="First Name" />
+              </div>
+              <div class="input-box">
+                <label for="phone"><i class="fa fa-phone-alt"></i></label>
+                <input type="tel" class="numberInput" placeholder="Mobile" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="phone-list">
+          <div class="inner-list">
+            <div class="first-box">
+              <div class="contact-names">
+                <h4 class="contact-head">Contacts</h4>
+              </div>
+              <div class="filter">
+                <input
+                  type="text"
+                  class="filter-contacts"
+                  placeholder="search contact"
+                />
+                <i class="fa fa-search"></i>
+              </div>
+            </div>
+            <div class="contact-list">
+              <div class="second-box">
+                <ul class="lists"></ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../JS/anotherContact.js"></script>
+  </body>
+</html>

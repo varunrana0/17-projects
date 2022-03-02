@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/normalize.css" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <h3>BMI Calculator</h3>
+    <figure class="container animate__animated animate__shakeY">
+      <!-- create a input of weight -->
+      <p>Weight in (kg)</p>
+
+      <div>
+        <input type="text" id="weight" />
+      </div>
+
+      <p>Height in (cm)</p>
+
+      <div><input type="text" id="height" /></div>
+
+      <div class="result">0</div>
+
+      <div>
+        <button id="btn">Calculate <span></span></button>
+        <button id="reset" type="reset">Reset</button>
+      </div>
+    </figure>
+  </body>
+  <script src="../JS/script.js"></script>
+</html>

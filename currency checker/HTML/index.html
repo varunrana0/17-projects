@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/normalize.css" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <title>Curreny Checker</title>
+  </head>
+  <body>
+    <h3>CURRENCY CONVERTER</h3>
+    <figure class="currency-container">
+      <div class="container">
+        <div class="curr-box">
+          <label>From</label>
+          <input style="margin-bottom: 1rem" type="number" class="putValue" />
+          <button class="reset" type="reset">Reset</button>
+        </div>
+        <div class="curr-box">
+          <label>Converted Currency</label>
+          <input
+            style="margin-bottom: 1rem"
+            disabled
+            type="text"
+            class="getValue"
+          />
+          <select class="select-item">
+            <option value="USD" selected>USD</option>
+            <option value="EUR">EUR</option>
+            <option value="AUD">AUD</option>
+            <option value="YEN">YEN</option>
+            <option value="IDR">IDR</option>
+            <option value="GBR">GBR</option>
+          </select>
+        </div>
+      </div>
+      <div class="result">2</div>
+    </figure>
+
+    <script src="../JS/script.js"></script>
+  </body>
+</html>

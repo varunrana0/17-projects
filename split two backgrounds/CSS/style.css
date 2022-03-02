@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: gray;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0;
+  background: url(/majestic-lukas-tAUpEIpBUOw-unsplash.jpg) no-repeat center
+    center/cover;
+}
+
+.split.left::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.split.right {
+  right: 0;
+  background: url(/ville-kaisla-HNCSCpWrVJA-unsplash.jpg) no-repeat center
+    center/cover;
+}
+
+.split.right::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.split.left,
+.split.left::before,
+.split.right,
+.split.right::before {
+  transition: all 1s ease-in;
+}
+
+h2 {
+  position: absolute;
+  white-space: nowrap;
+  top: 30%;
+  left: 50%;
+  color: #fff;
+  font-size: 4rem;
+  transform: translateX(-50%);
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  border: 2px solid #fff;
+  padding: 15px;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #333;
+}
+
+.split-left .left {
+  width: 75%;
+}
+.split-left .right {
+  width: 25%;
+}
+
+.split-right .right {
+  width: 75%;
+}
+.split-right .left {
+  width: 25%;
+}
+
+@media (max-width: 800px) {
+  h2 {
+    font-size: 2rem;
+    top: 40%;
+    white-space: nowrap;
+  }
+
+  .btn {
+    font-size: 1rem;
+    /* padding: ; */
+    width: 7rem;
+  }
+}

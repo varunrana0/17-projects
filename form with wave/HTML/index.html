@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <style>
+      /* basic styling */
+
+      /* systme spacing(px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT-SIZE(px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+      * {
+        margin: 0%;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        background: #444;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      form {
+        background: #222;
+        padding: 2rem 1.65rem;
+        color: #e7f3f0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        border-radius: 8px;
+      }
+      h2 {
+        text-align: center;
+      }
+
+      .form-box {
+        width: 300px;
+        position: relative;
+        margin-bottom: 24px;
+      }
+
+      form p {
+        text-align: center;
+      }
+
+      form input {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #e7f3f0;
+        font-size: 18px;
+      }
+
+      form label {
+        position: absolute;
+        top: 15px;
+        left: 0;
+      }
+
+      form input:focus,
+      form input:valid {
+        outline: 0;
+        transition: all 0.4s ease-in;
+        border-bottom-color: #86c3b2;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 1rem;
+        border: 0;
+        border-radius: 7px;
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .btn:active,
+      .btn-sign:active {
+        transform: scale(0.98);
+      }
+
+      .btn-sign {
+        display: inline-block;
+        background: transparent;
+        color: #e7f3f0;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .form-box label span {
+        display: inline-block;
+        font-size: 18px;
+        min-width: 5px;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      .form-box input:focus + label span,
+      .form-box input:valid + label span {
+        color: #86c3b2;
+        transform: scale(1.1) translate(10px, -35px);
+        letter-spacing: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <form>
+        <h2>Please Login</h2>
+        <div class="form-box">
+          <input type="email" id="inputName" required />
+          <label>Name</label>
+        </div>
+        <div class="form-box">
+          <input type="password" id="password" required />
+          <label>Password</label>
+        </div>
+        <button class="btn">Send</button>
+        <p>
+          Don't Have any account?&nbsp;<a href="#" class="btn-sign">Signup!</a>
+        </p>
+      </form>
+    </div>
+
+    <script src="../JS/script.js"></script>
+  </body>
+</html>

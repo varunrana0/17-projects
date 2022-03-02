@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      name="slide"
+      style="border-radius: 8px; object-fit: cover; height: 100vh; width: 100%"
+    />
+  </body>
+
+  <script>
+    let i = 0;
+    let images = [];
+
+    // ?image list added
+    images[0] = "./asael-pena-n-HtQS7IgU4-unsplash.jpg";
+    images[1] = "./ben-white-ZCv_tXbTsNA-unsplash.jpg";
+    images[2] = "./hans-vivek-gfLlvYFD7NE-unsplash.jpg";
+    images[3] = "./pexels-adrianna-calvo-569996.jpg";
+    images[4] = "./pexels-burst-374870.jpg";
+    images[5] = "./pexels-dom-j-303324.jpg";
+    images[6] = "./quan-le-A_NBmfVh6ao-unsplash.jpg";
+    images[7] = "./starbucks.jpg";
+    images[8] = "./vaishnav-chogale-B8Ij2-kpgfA-unsplash.jpg";
+
+    // create a function for image sliding
+
+    function slideImage() {
+      document.slide.src = images[i];
+
+      if (i < images.length - 1) {
+        i++;
+      } else {
+        i = 0;
+      }
+
+      setTimeout("slideImage()", 2000);
+    }
+    slideImage();
+  </script>
+</html>
